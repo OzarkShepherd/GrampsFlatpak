@@ -1,11 +1,5 @@
 name: CreateFlatpak
 
-on:
- push:
-    tags:
-      - '*'
-  workflow_dispatch:
-
 jobs:
   flatpak:
 
