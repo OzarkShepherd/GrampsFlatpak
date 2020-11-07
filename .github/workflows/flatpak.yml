@@ -1,5 +1,8 @@
 name: CreateFlatpak
 
+on:
+  create:
+
 jobs:
   flatpak:
 
@@ -25,5 +28,3 @@ jobs:
         
     - name: UploadBundle
       uses: actions/upload-artifact
-        with:
-          name: Gramps-5-1-3.flatpak
