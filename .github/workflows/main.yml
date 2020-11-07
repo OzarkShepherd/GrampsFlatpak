@@ -3,6 +3,7 @@ name: CreateFlatpak
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   flatpak:
@@ -28,4 +29,6 @@ jobs:
         flatpak build-bundle repo gramps5-1-3.flatpak org.grampsproject.Gramps.yml
         
     - name: UploadBundle
-      uses: actions/upload-artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: gramps.flatpak
