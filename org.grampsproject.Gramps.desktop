@@ -7,5 +7,4 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Office;
-MimeType=application/x-gramps;application/x-gedcom;application/x-gramps-package;application/x-gramps-xml;
 Exec=org.grampsproject.Gramps
