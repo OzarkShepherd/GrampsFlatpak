@@ -4,6 +4,8 @@ runtime: org.gnome.Platform//3.36
 sdk: org.gnome.Sdk//3.36
 writable-sdk: true
 command: gramps
+rename-icon: gramps
+rename-desktop-file: org.grampsproject.gramps.desktop
 finish-args:
 # needs home access to access documents and pictures
   - --filesystem=home
