@@ -5,7 +5,7 @@ sdk: org.gnome.Sdk//3.36
 writable-sdk: true
 command: gramps
 finish-args:
-# needs home access to access documents and pictures
+# needs home access to access documents and pictures, needs host to install app launcher systemwide.
   - --filesystem=host
 # will not work without more extensive bus access
   - --socket=session-bus
