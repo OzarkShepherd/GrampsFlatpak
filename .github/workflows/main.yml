@@ -27,7 +27,7 @@ jobs:
         
     - name: BuildBundle
       run: |
-        flatpak build-bundle repo gramps5-1-3.flatpak org.grampsproject.Gramps.yml
+        flatpak build-bundle repo gramps.flatpak org.grampsproject.Gramps
         
     - name: UploadBundle
       uses: actions/upload-artifact@v2
