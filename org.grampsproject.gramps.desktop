@@ -2,7 +2,7 @@
 Name=Gramps
 GenericName=Genealogy System
 Comment=Manage genealogical information and perform genealogical research and analysis
-Icon=org.grampsproject.Gramps.png
+Icon=gramps.png
 Terminal=false
 Type=Application
 StartupNotify=true
