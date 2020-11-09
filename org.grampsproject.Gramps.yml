@@ -3,23 +3,25 @@ app-id: org.grampsproject.Gramps
 runtime: org.gnome.Platform//3.36
 sdk: org.gnome.Sdk//3.36
 writable-sdk: true
-command: gramps
+command: /app/bin/gramps
 rename-icon: gramps
 rename-desktop-file: org.grampsproject.gramps.desktop
 finish-args:
 # needs home access to access documents and pictures
   - --filesystem=home
 # will not work without more extensive bus access
-  - --socket=session-bus
+#  - --socket=session-bus
+  - --env=PATH=/usr/lib/python3.*
 # for gui
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --share=ipc
+  - --device=dri
 #needs network access for maps
   - --share=network
 modules:
 # oracle requires a login to get bsddb
 
-# git wants gnome-common installed
   - name: osmgpsmapDependency
     buildsystem: autotools
     sources:
@@ -30,14 +32,16 @@ modules:
   - name: exiv2Dependency
     buildsystem: cmake
     sources:
-      - type: git
-        url:  https://github.com/Exiv2/exiv2
+      - type: archive
+        url:  https://www.exiv2.org/builds/exiv2-0.27.3-Source.tar.gz
+        sha256:  a79f5613812aa21755d578a297874fb59a85101e793edc64ec2c6bd994e3e778
 
   - name: gexiv2Dependency
     buildsystem: meson
     sources:
-      - type: git
-        url:  https://gitlab.gnome.org/GNOME/gexiv2
+      - type: archive
+        url:  https://download.gnome.org/sources/gexiv2/0.12/gexiv2-0.12.1.tar.xz
+        sha256:  8aeafd59653ea88f6b78cb03780ee9fd61a2f993070c5f0d0976bed93ac2bd77
 
   - name: PyICUDependency
     buildsystem: simple
@@ -51,16 +55,18 @@ modules:
         sha256:  a9a5bf6833360f8f69e9375b91c1a7dd6e0c9157a42aee5bb7d6891804d96371
 
   - name: GraphVizDependency
-    buildsystem: cmake
+    buildsystem: autotools
     sources:
-      - type: git
-        url: https://gitlab.com/graphviz/graphviz
+      - type: archive
+        url: https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.0.tar.gz
+        sha256:  9aabd13a8018b708ab3c822de2326c19d0a52ed59f50a6b0f9318c07e2a6d93b
 
   - name: GhostscriptDependency
     buildsystem: autotools
     sources:
-      - type: git
-        url:  https://github.com/ArtifexSoftware/ghostpdl
+      - type: archive
+        url:  https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9533/ghostscript-9.53.3.tar.gz
+        sha256:  6eaf422f26a81854a230b80fd18aaef7e8d94d661485bd2e97e695b9dce7bf7f
 
   - name: Gramps
     buildsystem: simple
