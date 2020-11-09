@@ -1,7 +1,8 @@
 app-id: org.grampsproject.Gramps
 # flatpak-builder will not take com.gramps-project.Gramps
-runtime: org.gnome.Platform//3.36
-sdk: org.gnome.Sdk//3.36
+runtime: org.gnome.Platform
+runtime-version: '3.36'
+sdk: org.gnome.Sdk
 writable-sdk: true
 command: /app/bin/gramps
 rename-icon: gramps
