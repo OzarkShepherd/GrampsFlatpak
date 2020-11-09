@@ -79,3 +79,5 @@ modules:
         sha256:  91d755b7e407af40ce5ebe24b29baab860bc6e2871ebcbee3f5e109c438df1e8
       - type: file
         path:  org.grampsproject.gramps.desktop
+      - type: file
+        path:  org.grampsproject.Gramps.metainfo.xml
