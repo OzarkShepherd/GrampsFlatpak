@@ -13,8 +13,7 @@ finish-args:
 #  - --socket=session-bus
   - --env=PATH=/usr/lib/python3.*
 # for gui
-  - --socket=wayland
-  - --socket=fallback-x11
+  - --socket=x11
   - --share=ipc
   - --device=dri
 #needs network access for maps
