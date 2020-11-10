@@ -13,7 +13,7 @@
       Gramps is a free software project and community. We strive to produce a genealogy program that is both intuitive for hobbyists and feature-complete for professional genealogists. It is a community project, created, developed and governed by genealogists.
     </p>
     <p>
-      This flatpak does not include BSDDB because a sign-in is required for its download, which makes automated installation difficult.  Please convert your database to SQLite3 before using the flatpak.  The flatpak includes all other dependencies for the basic installation, but some add-ons with extra dependencies are not supported at this time.
+      This flatpak does not include BSDDB because a sign-in is required for its download, which makes automated installation difficult.  Please convert your database to SQLite3, which became available in Gramps 5.0.x, before using the flatpak.  The flatpak includes all other dependencies for the basic installation, but some add-ons with extra dependencies are not supported at this time.
     </p>
   </description>
 
