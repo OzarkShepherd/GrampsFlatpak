@@ -10,13 +10,11 @@ rename-desktop-file: org.gramps_project.gramps.desktop
 finish-args:
 # needs home access to access documents and pictures
   - --filesystem=home
-# will not work without more extensive bus access
-#  - --socket=session-bus
-  - --env=PATH=/usr/lib/python3
+# needs to own upstream name
+  - --own-name=org.gramps-project.Gramps
 # for gui
   - --socket=x11
   - --share=ipc
-  - --device=dri
 #needs network access for maps
   - --share=network
 modules:
