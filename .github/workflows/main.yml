@@ -23,11 +23,11 @@ jobs:
         
     - name: BuildFlatpak
       run: |
-        flatpak-builder --repo=repo --force-clean build-dir org.grampsproject.Gramps.yml
+        flatpak-builder --repo=repo --force-clean build-dir org.gramps_project.Gramps.yml
         
     - name: BuildBundle
       run: |
-        flatpak build-bundle repo gramps.flatpak org.grampsproject.Gramps
+        flatpak build-bundle repo gramps.flatpak org.gramps_project.Gramps
         
     - name: UploadBundle
       uses: actions/upload-artifact@v2
