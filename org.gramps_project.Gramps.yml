@@ -17,7 +17,7 @@ finish-args:
 #needs network access for maps
   - --share=network
 modules:
-# oracle requires a login to get bsddb, and unix directory was empty in the db-6.1.23.tar.gz and db-6.1.23.NC.tar.gz
+# oracle requires a login to get bsddb, and unix directory was empty in the db-6.1.23.tar.gz and db-6.1.23.NC.tar.gz as of 12 Nov 2020
 
   - name: osmgpsmapDependency
     buildsystem: autotools
@@ -36,7 +36,7 @@ modules:
   - name: gexiv2Dependency
     buildsystem: meson
     config-opts:
-      - -C app
+      - meson install --only-changed
     ensure-writable:
       - /lib/python3.8/site-packages/gi/overrides/GExiv2.py
       - /lib/python3.8/site-packages/gi/overrides/
