@@ -36,7 +36,7 @@ modules:
   - name: gexiv2Dependency
     buildsystem: meson
     config-opts:
-      - introspect --buildoptions /app
+      - -C app
     ensure-writable:
       - /lib/python3.8/site-packages/gi/overrides/GExiv2.py
       - /lib/python3.8/site-packages/gi/overrides/
