@@ -36,7 +36,8 @@ modules:
   - name: gexiv2Dependency
     buildsystem: meson
     config-opts:
-      - meson install --only-changed
+      - meson build && cd build
+      - ninja
     ensure-writable:
       - /lib/python3.8/site-packages/gi/overrides/GExiv2.py
       - /lib/python3.8/site-packages/gi/overrides/
