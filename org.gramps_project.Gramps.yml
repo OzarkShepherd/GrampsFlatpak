@@ -37,7 +37,7 @@ modules:
     buildsystem: meson
     config-opts:
       - meson build && cd build
-      - ninja
+      - meson install
     ensure-writable:
       - /lib/python3.8/site-packages/gi/overrides/GExiv2.py
       - /lib/python3.8/site-packages/gi/overrides/
