@@ -39,7 +39,7 @@ modules:
       - /lib/python3.8/site-packages/gi/overrides/GExiv2.py
       - /lib/python3.8/site-packages/gi/overrides/
     build-commands:
-      - meson build
+#      - meson build
       - meson install -C /app
     sources:
       - type: archive
