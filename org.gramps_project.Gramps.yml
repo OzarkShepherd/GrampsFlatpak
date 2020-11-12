@@ -3,7 +3,7 @@ app-id: org.gramps_project.Gramps
 runtime: org.gnome.Platform
 runtime-version: '3.38'
 sdk: org.gnome.Sdk
-writable-sdk: true
+# writable-sdk: true
 command: /app/bin/gramps
 rename-icon: gramps
 rename-desktop-file: org.gramps_project.Gramps.desktop
@@ -36,6 +36,8 @@ modules:
 
   - name: gexiv2Dependency
     buildsystem: meson
+    ensure-writable:
+      - /lib/python3.8/site-packages/gi/overrides/GExiv2.py
     sources:
       - type: archive
         url:  https://download.gnome.org/sources/gexiv2/0.12/gexiv2-0.12.1.tar.xz
@@ -44,7 +46,7 @@ modules:
   - name: PyICUDependency
     buildsystem: simple
     ensure-writable:
-      - /lib/python3.7/site-packages/easy-install.pth
+      - /lib/python3.8/site-packages/easy-install.pth
     build-commands:
       - python3 setup.py install --prefix=/app
     sources:
@@ -69,7 +71,7 @@ modules:
   - name: Gramps
     buildsystem: simple
     ensure-writable:
-      - /lib/python3.7/site-packages/easy-install.pth
+      - /lib/python3.8/site-packages/easy-install.pth
     build-commands:
       - python3 setup.py build -build-base=/app
       - python3 setup.py install --prefix=/app --exec-prefix=/bin
