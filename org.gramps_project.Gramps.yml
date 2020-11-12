@@ -36,7 +36,7 @@ modules:
   - name: gexiv2Dependency
     buildsystem: meson
     config-opts:
-      - --prefix=/app
+      - --only-changed
     ensure-writable:
       - /lib/python3.8/site-packages/gi/overrides/GExiv2.py
       - /lib/python3.8/site-packages/gi/overrides/
