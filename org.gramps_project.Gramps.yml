@@ -17,7 +17,7 @@ finish-args:
 #needs network access for maps
   - --share=network
 modules:
-# oracle requires a login to get bsddb
+# oracle requires a login to get bsddb, and unix directory was empty in the db-6.1.23.tar.gz and db-6.1.23.NC.tar.gz
 
   - name: osmgpsmapDependency
     buildsystem: autotools
