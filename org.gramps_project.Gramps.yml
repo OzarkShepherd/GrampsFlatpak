@@ -3,7 +3,7 @@ app-id: org.gramps_project.Gramps
 runtime: org.gnome.Platform
 runtime-version: '3.38'
 sdk: org.gnome.Sdk
-writable-sdk: true
+# writable-sdk: true
 command: /app/bin/gramps
 rename-icon: gramps
 rename-desktop-file: org.gramps_project.Gramps.desktop
@@ -19,14 +19,6 @@ finish-args:
   - --share=network
 modules:
 # oracle requires a login to get bsddb
-  - name: pyBSDDB3
-    buildsystem: simple
-    build-commands:
-      - python3 setup.py install --prefix=/app
-    sources:
-      - type: archive
-        url:  https://files.pythonhosted.org/packages/fa/ad/eb82bcccbfb076b6a6797f48c339460699103065fb2a2fc72403b16970fe/bsddb3-6.2.7.tar.gz
-        sha256:  b0f7fa63eb240cd5815809c9d1d7df9f7cc8d6fa9619d0edbe9c794afc02dc9f
 
   - name: osmgpsmapDependency
     buildsystem: autotools
