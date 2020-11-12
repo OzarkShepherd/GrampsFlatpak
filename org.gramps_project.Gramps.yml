@@ -40,7 +40,7 @@ modules:
       - /lib/python3.8/site-packages/gi/overrides/
     build-commands:
 #      - meson build
-      - meson install -C /app
+      - meson install
     sources:
       - type: archive
         url:  https://download.gnome.org/sources/gexiv2/0.12/gexiv2-0.12.1.tar.xz
